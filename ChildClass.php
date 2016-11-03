@@ -30,6 +30,6 @@
 		}
 
 		public function __toString() {
-			return "Zone: " . $this->getZone() . "<br>" . "Depth: " . $this->getDepth();
+			return "Animal Type: " . $this->getType() . "<br>" . "Habitat: " . $this->getHabitat() . "<br>" . "Food: " . $this->getFood() . "<br>" . "Zone: " . $this->getZone() . "<br>" . "Depth: " . $this->getDepth();
 		}
 	}

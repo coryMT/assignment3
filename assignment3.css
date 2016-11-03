@@ -2,6 +2,11 @@
 
 body {
   text-align: center;
+  background-color: #302B54;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 img {
