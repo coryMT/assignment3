@@ -30,6 +30,6 @@
 		}
 
 		public function __toString() {
-			return "Zone: " . $this->getZone() . "<br>" . "Number of Fins: " . $this.getDepth();
+			return "Zone: " . $this->getZone() . "<br>" . "Number of Fins: " . $this->getDepth();
 		}
 	}
