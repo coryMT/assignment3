@@ -22,14 +22,14 @@
 			$this->depth = $newdepth;
 		}
 
-		public function __construct($zone, $depth, $type, $habitat, $food) {
+		public function __construct($zone, $depth, $type, $habitat, $food, $image) {
 			$this->zone = $zone;
 			$this->depth = $depth;
 
-			parent::__construct($type, $habitat, $food);
+			parent::__construct($type, $habitat, $food, $image);
 		}
 
 		public function __toString() {
-			return "Zone: " . $this->getZone() . "<br>" . "Number of Fins: " . $this->getDepth();
+			return "Zone: " . $this->getZone() . "<br>" . "Depth: " . $this->getDepth();
 		}
 	}

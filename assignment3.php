@@ -1,8 +1,8 @@
 <?php
 	require_once('ParentClass.php');
 	require_once('ChildClass.php');
-	$koala = new ParentClass("Koala", "eucalyptal forests", "eucalyptus");
-	$anglerfish = new ChildClass("abyssal", "4000 meters", "Angler Fish", "deep sea", "crustaceans");
+	$koala = new ParentClass("Koala", "eucalyptal forests", "eucalyptus", "images/koala.jpg");
+	$anglerfish = new ChildClass("abyssal", "4000 meters", "Angler Fish", "deep sea", "crustaceans", "images/anglerfish.jpg");
 
 	$koala2 = clone($koala);
 ?>
@@ -24,10 +24,12 @@
 	</p>
 	<div class="parent">
 		<div class="object">
-			<?= $koala; ?>
+			<p>
+				<?= $koala; ?>
+			</p>
 		</div>
 		<div class="image">
-			<img src="images/koala.jpg" alt="koala" />
+			<img src="<?=$koala->getImage();?>" alt="koala" />
 		</div>
 	</div>
 
@@ -36,10 +38,12 @@
 	</p>
 	<div class="parent">
 		<div class="object">
-			<?= $anglerfish; ?>
+			<p>
+				<?= $anglerfish; ?>
+			</p>
 		</div>
 		<div class="image">
-			<img src="images/anglerfish.jpg" alt="angler fish" />
+			<img src="<?=$anglerfish->getImage();?>" alt="angler fish" />
 		</div>
 	</div>
 
@@ -48,11 +52,13 @@
 	</p>
 	<div class="parent">
 		<div class="object">
-			<?= $anglerfish->setDepth("4000 to 6000 meters"); ?>
-			<?= $anglerfish; ?>
+			<p>
+				<?= $anglerfish->setDepth("4000 to 6000 meters"); ?>
+				<?= $anglerfish; ?>
+			</p>
 		</div>
 		<div class="image">
-			<img src="images/anglerfish.jpg" alt="angler fish" />
+			<img src="<?=$anglerfish->getImage();?>" alt="angler fish" />
 		</div>
 	</div>
 
@@ -61,11 +67,14 @@
 	</p>
 	<div class="parent">
 		<div class="object">
-			<?= $koala->setFood("OTHER KOALAS"); ?>
-			<?= $koala; ?>
+			<p>
+				<?= $koala->setFood("OTHER KOALAS"); ?>
+				<?= $koala->setImage("images/angrykoala.jpg"); ?>
+				<?= $koala; ?>
+			</p>
 		</div>
 		<div class="image">
-			<img src="images/angrykoala.jpg" alt="angry koala" />
+			<img src="<?=$koala->getImage();?>" alt="angry koala" />
 		</div>
 	</div>
 
@@ -74,10 +83,12 @@
 	</p>
 	<div class="parent">
 		<div class="object">
-			<?= $koala2; ?>
+			<p>
+				<?= $koala2; ?>
+			</p>
 		</div>
 		<div class="image">
-			<img src="images/koala.jpg" alt="koala" />
+			<img src="<?=$koala2->getImage();?>" alt="koala" />
 		</div>
 	</div>
 
